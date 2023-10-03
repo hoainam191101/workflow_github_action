@@ -7,5 +7,7 @@ jobs:
     runs-on: ubuntu-latest
     name: test
     steps: 
-      - run: echo "ToDay =$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo "hello world, today is  ${{env.ToDay}}"
+      - name: set day
+        run: echo "ToDay=$(date +%y-%m-%d)" >> $GITHUB_ENV
+      - name: today
+        run: echo "hello world, today is  ${{env.ToDay}}"
