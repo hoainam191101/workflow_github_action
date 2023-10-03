@@ -8,5 +8,4 @@ jobs:
     name: test
     steps: 
       - run: echo "ToDay =$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - run: echo hello world
-      - run: echo today is $ToDay
+      - run: echo hello world, today is $ToDay
