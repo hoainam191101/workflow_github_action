@@ -1,13 +1,13 @@
-name: hello world
+name: workflow
 on: 
   push:
     branches: [main]
 jobs: 
-  say-hello:
+  schedule_for_github_action:
     runs-on: ubuntu-latest
-    name: test
+    name: test_schedule
     steps: 
-      - name: set day
-        run: echo "ToDay=$(date +%y-%m-%d)" >> $GITHUB_ENV
-      - name: today
-        run: echo "hello world, today is  ${{env.ToDay}}"
+      - name: unit test
+        run: test/test_extractor.py
+      - name: get_time
+        run: echo "The current time is $(date)"
