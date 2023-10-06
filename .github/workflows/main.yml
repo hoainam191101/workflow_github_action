@@ -9,10 +9,10 @@ jobs:
     steps: 
       - name: checkout
         uses: actions/checkout@v3
+        
       - name: unit test
         run: |
-          python -m pip install --upgrade pip
-          pip install -r test/test-requirements.txt
-          pytest test/test_extractor.py
+          python test/test_extractor.py
+          
       - name: get_time
         run: echo "The current time is $(date)"
