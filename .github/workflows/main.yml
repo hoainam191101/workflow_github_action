@@ -11,6 +11,8 @@ jobs:
         uses: actions/checkout@v3
       - name: unit test
         run: |
-          pytest test/test_extractor.py
+          python -m pip install --upgrade pip
+          pip install -r test/test-requirements.txt
+          coverage run -m pytest test/test_extractor.py
       - name: get_time
         run: echo "The current time is $(date)"
