@@ -1,6 +1,6 @@
 import pytest
 
-def add(int x, int y)
+def add(x,y):
   return x+y
 
 print("Nguyen Hoai Nam")
