@@ -7,7 +7,10 @@ jobs:
     runs-on: ubuntu-latest
     name: test_schedule
     steps: 
+      - name: checkout
+        uses: actions/checkout@v3
       - name: unit test
-        run: test/test_extractor.py
+        run: |
+          pytest test/test_extractor.py
       - name: get_time
         run: echo "The current time is $(date)"
